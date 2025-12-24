@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class OpenGoogleTest {
@@ -10,6 +11,12 @@ public class OpenGoogleTest {
 
 
     public void googleTest() {
+
+        ChromeOptions chromeOptions = new ChromeOptions();
+        
+        chromeOptions.addArguments("--start-maximized");
+        chromeOptions.addArguments("--incognito");
+        chromeOptions.addArguments("--headless");
 
         //driver kiyanne object ekak.webdriver eke thiyana onama interface ekak driver kiyana object walin method acces karagatha haki
         WebDriver driver = new ChromeDriver();
